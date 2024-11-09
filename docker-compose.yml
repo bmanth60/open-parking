@@ -1,0 +1,10 @@
+services:
+  app:
+    image: oven/bun
+    ports:
+      - 3000:4321
+    working_dir: /usr/src/app
+    user: 1000:1000
+    volumes:
+      - ./:/usr/src/app
+    command: bun --bun run dev
