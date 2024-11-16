@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  placeholder: string;
+  autofocus?: boolean;
+}
+
+const { name, placeholder, autofocus = false } = Astro.props;
+---
+
+<label class="md:input md:input-bordered md:flex items-center gap-2">
+  <div class="label">
+    <span class="md:w-36 md:inline-block label-text">{name}</span>
+  </div>
+  <input
+    type="text"
+    class="max-md:input max-md: input-bordered w-full grow"
+    placeholder={placeholder}
+    {autofocus}
+  />
+</label>

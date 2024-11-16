@@ -1,0 +1,23 @@
+---
+import FormInput from "./FormInput.astro";
+import Clock from "./Clock.vue";
+---
+
+<div class="card bg-base-200 shadow-xl w-full">
+  <div class="card-body">
+    <div class="card-title justify-between">
+      <h2>Register Guest</h2>
+      <Clock client:load />
+    </div>
+    <FormInput
+      name="Full Name of Guest"
+      placeholder="First and Last"
+      autofocus
+    />
+    <FormInput name="Phone Number" placeholder="000-000-0000" />
+    <FormInput name="License Plate" placeholder="AA1 11A" />
+    <div class="card-actions justify-end mt-4">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ import tailwindTypography from "@tailwindcss/typography";
 import daisyui from "daisyui";
 const config: Config = {
   darkMode: "class",
-  content: ["./src/**/*.{astro,html,svelte,js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{astro,html,svelte,js,ts,jsx,tsx,vue}"],
   daisyui: {
     themes: [
       {
@@ -89,6 +89,9 @@ const config: Config = {
     ],
   },
   theme: {
+    screens: {
+      md: "940px",
+    },
     extend: {},
   },
   plugins: [tailwindTypography, daisyui],

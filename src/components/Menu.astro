@@ -1,0 +1,56 @@
+---
+import CurrentStats from "./CurrentStats.vue";
+import Clipboard from "./icons/Clipboard.astro";
+import { Cog } from "./icons";
+---
+
+<nav>
+  <div class="navbar bg-base-300">
+    <div class="flex">
+      <a class="btn btn-ghost text-xl"
+        ><img class="w-12 h-12" src="/logo-dark.png" />Open Parking</a
+      >
+    </div>
+    <div class="flex-1">
+      <ul class="flex flex-row gap-4 hidden">
+        <li>
+          <a class="flex" href="/reports"
+            ><Clipboard class="w-6 h-6 text-white" />Reports</a
+          >
+        </li>
+        <li>
+          <a class="flex" href="/configuration"
+            ><Cog class="w-6 h-6 text-white" />Configuration</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="grow">
+      <CurrentStats client:load />
+    </div>
+    <div class="dropdown dropdown-end whitespace-nowrap">
+      <div
+        tabindex={0}
+        role="button"
+        class="btn btn-ghost avatar flex items-center w-fit space-x-4 rtl:space-x-reverse"
+      >
+        <span>Joe Brown</span>
+        <div
+          class="relative flex justify-center items-center w-10 rounded-full"
+        >
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+          />
+        </div>
+      </div>
+      <ul
+        tabindex={0}
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      >
+        <li><a>Settings</a></li>
+        <li><a>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
